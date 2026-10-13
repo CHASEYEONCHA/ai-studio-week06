@@ -9,7 +9,7 @@ def mock_llm_call(system, user_message, temperature=0.2, max_tokens=500):
     if random.random() < 0.2:
         malformed_responses = [
             # 유형 1: 코드펜스 포함
-            '```json\n{"category": "배송", "sentiment": "긍정", "score": 4}\n```',
+            '```json {"category": "배송", "sentiment": "긍정", "score": 4}```',
             # 유형 2: 사족 포함
             '물론입니다! 분석 결과는 다음과 같습니다. {"category": "배송", "sentiment": "긍정", "score": 4}',
             # 유형 3: 잘린 JSON
